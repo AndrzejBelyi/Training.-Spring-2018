@@ -1,0 +1,16 @@
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.Tests.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.Tests.pdb
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.pdb
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csprojResolveAssemblyReference.cache
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csproj.CoreCompileInputs.cache
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csproj.CopyComplete
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.pdb

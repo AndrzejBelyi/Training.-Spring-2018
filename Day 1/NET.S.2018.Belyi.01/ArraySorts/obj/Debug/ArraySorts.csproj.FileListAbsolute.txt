@@ -1,0 +1,6 @@
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts\bin\Debug\ArraySorts.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts\bin\Debug\ArraySorts.pdb
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.csproj.CoreCompileInputs.cache
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.dll
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.pdb
+E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.csprojResolveAssemblyReference.cache
