@@ -24,7 +24,7 @@ namespace ArraySorts
         }       
 
         /// <summary>
-        /// This public method used to calling overloaded version of QuickSort
+        /// This public method used to sorting array used merged sort algorithm
         /// </summary>
         /// <param name="array"></param>
         public static int[] MergeSort(int[] array)
@@ -86,7 +86,7 @@ namespace ArraySorts
         }
 
         /// <summary>
-        /// This private method sorting array using merge sort algorithm
+        /// This private method merged two arrays,use for merge sort algorithm
         /// </summary>
         /// <param name="left"></param>
         /// <param name="right"></param>
