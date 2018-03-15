@@ -7,6 +7,10 @@ namespace ArraySorts.Tests
     public class SortsTests
     {
         #region QuickSort Tests
+
+        /// <summary>
+        /// Testing the implementation of the quick sort algorithm on valid data(array not sorted)
+        /// </summary>
         [TestMethod]
         public void QuickSort_UnsortedArray_SortedArray()
         {
@@ -16,6 +20,9 @@ namespace ArraySorts.Tests
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
+        /// <summary>
+        /// Testing the implementation of the quick sort algorithm on valid data(array sorted)
+        /// </summary>
         [TestMethod]
         public void QuickSort_SortedArray_SortedArray()
         {
@@ -25,6 +32,9 @@ namespace ArraySorts.Tests
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
+        /// <summary>
+        /// Testing the implementation of the quick sort algorithm on empty array
+        /// </summary>
         [TestMethod]
         public void QuickSort_ArrayWithNoElements_EmptyArray()
         {
@@ -34,6 +44,9 @@ namespace ArraySorts.Tests
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
+        /// <summary>
+        /// Testing the implementation of the quick sort algorithm on invalid data(null reference)
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void QuickSort_NullReference_ArgumentNullException()
@@ -44,6 +57,9 @@ namespace ArraySorts.Tests
         #endregion
 
         #region MergeSort Tests
+        /// <summary>
+        /// Testing the implementation of the merge sort algorithm on valid data(array not sorted)
+        /// </summary>
         [TestMethod]
         public void MergeSort_UnsortedArray_SortedArray()
         {
@@ -53,6 +69,9 @@ namespace ArraySorts.Tests
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
+        /// <summary>
+        /// Testing the implementation of the merge sort algorithm on valid data(array sorted)
+        /// </summary>
         [TestMethod]
         public void MergeSort_SortedArray_SortedArray()
         {
@@ -62,6 +81,9 @@ namespace ArraySorts.Tests
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
+        /// <summary>
+        /// Testing the implementation of the quick sort algorithm on empty array
+        /// </summary>
         [TestMethod]
         public void MergeSort_ArrayWithNoElements_EmptyArray()
         {
@@ -71,6 +93,9 @@ namespace ArraySorts.Tests
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
+        /// <summary>
+        /// Testing the implementation of the quick sort algorithm on invalid data(null reference)
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void MergeSort_NullReference_ArgumentNullException()

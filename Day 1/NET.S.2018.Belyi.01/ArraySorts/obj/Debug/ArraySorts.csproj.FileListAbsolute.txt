@@ -4,3 +4,9 @@ E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.csproj.CoreCompileIn
 E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.dll
 E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.pdb
 E:\Epam\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.csprojResolveAssemblyReference.cache
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts\bin\Debug\ArraySorts.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts\bin\Debug\ArraySorts.pdb
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.csprojResolveAssemblyReference.cache
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.csproj.CoreCompileInputs.cache
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts\obj\Debug\ArraySorts.pdb

@@ -14,3 +14,19 @@ E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csproj.C
 E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csproj.CopyComplete
 E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.dll
 E:\Epam\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.pdb
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.Tests.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.Tests.pdb
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\ArraySorts.pdb
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csprojResolveAssemblyReference.cache
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csproj.CoreCompileInputs.cache
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.csproj.CopyComplete
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.dll
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ArraySorts.Tests\obj\Debug\ArraySorts.Tests.pdb

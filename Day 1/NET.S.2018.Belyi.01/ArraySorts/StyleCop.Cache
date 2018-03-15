@@ -3,6 +3,9 @@
   <project key="-25408726">
     <configuration>DEBUG;TRACE</configuration>
   </project>
+  <project key="1686997919">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018.03.11 22:04:08.424</styleCop>
@@ -26,14 +29,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="1686997919">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="Sorts.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018.03.11 22:04:08.424</styleCop>
       <settingsFile>2018.03.14 13:57:28.299</settingsFile>
-      <sourceFile>2018.03.15 10:05:02.648</sourceFile>
+      <sourceFile>2018.03.15 10:13:45.493</sourceFile>
       <parser>2018.03.11 22:04:08.424</parser>
       <StyleCop.CSharp.DocumentationRules>2018.03.11 22:04:08.424</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>725307449</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -52,4 +52,7 @@
     </timestamps>
     <violations />
   </sourcecode>
+  <project key="121095491">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
 </stylecopresultscache>

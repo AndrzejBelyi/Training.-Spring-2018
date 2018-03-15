@@ -1,0 +1,6 @@
+E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\bin\Debug\FiltersLibrary.dll
+E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\bin\Debug\FiltersLibrary.pdb
+E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.csprojResolveAssemblyReference.cache
+E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.csproj.CoreCompileInputs.cache
+E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.dll
+E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.pdb

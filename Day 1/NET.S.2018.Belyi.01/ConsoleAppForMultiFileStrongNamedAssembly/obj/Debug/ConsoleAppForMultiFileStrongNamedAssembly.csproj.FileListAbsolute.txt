@@ -5,3 +5,10 @@ E:\Epam\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\
 E:\Epam\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\ConsoleAppForMultiFileStrongNamedAssembly.csproj.CoreCompileInputs.cache
 E:\Epam\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\ConsoleAppForMultiFileStrongNamedAssembly.exe
 E:\Epam\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\ConsoleAppForMultiFileStrongNamedAssembly.pdb
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\bin\Debug\ConsoleAppForMultiFileStrongNamedAssembly.exe.config
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\bin\Debug\ConsoleAppForMultiFileStrongNamedAssembly.exe
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\bin\Debug\ConsoleAppForMultiFileStrongNamedAssembly.pdb
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\ConsoleAppForMultiFileStrongNamedAssembly.csprojResolveAssemblyReference.cache
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\ConsoleAppForMultiFileStrongNamedAssembly.csproj.CoreCompileInputs.cache
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\ConsoleAppForMultiFileStrongNamedAssembly.exe
+e:\GitHub\Training.-Spring-2018\Day 1\NET.S.2018.Belyi.01\ConsoleAppForMultiFileStrongNamedAssembly\obj\Debug\ConsoleAppForMultiFileStrongNamedAssembly.pdb
