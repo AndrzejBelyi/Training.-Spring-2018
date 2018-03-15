@@ -12,33 +12,48 @@ namespace ArraySorts
     public static class Sorts
     {
         /// <summary>
-        /// This public method used to calling overloaded version of QuickSort
+        /// Used to sort array using quick sort algorithm
         /// </summary>
         /// <param name="array"></param>
         public static void QuickSort(int[] array)
         {
-            if (array != null && array.Length > 1)
+            if (array == null)
             {
-                QuickSort(array, 0, array.Length - 1);
-            }
-        }       
-
-        /// <summary>
-        /// This public method used to sorting array used merged sort algorithm
-        /// </summary>
-        /// <param name="array"></param>
-        public static int[] MergeSort(int[] array)
-        {
-            if (array.Length < 2)
-            {
-                return array;
+                throw new ArgumentNullException();                
             }
             else
             {
-                int middle = array.Length / 2;
-                int[] left = array.Take(middle).ToArray();
-                int[] right = array.Skip(middle).ToArray();
-                return Merge(MergeSort(left),MergeSort(right));
+                if (array.Length > 1)
+                {
+                    QuickSort(array, 0, array.Length - 1);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Used to sort array using merge sort algorithm
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>Return sorted array</returns>
+        public static int[] MergeSort(int[] array)
+        {
+            if (array == null)
+            {
+                throw new ArgumentNullException();
+            }
+            else
+            {
+                if (array.Length > 1)
+                {
+                    int middle = array.Length / 2;
+                    int[] left = array.Take(middle).ToArray();
+                    int[] right = array.Skip(middle).ToArray();
+                    return Merge(MergeSort(left), MergeSort(right));
+                }
+                else
+                {
+                    return array;
+                }
             }
         }
 
@@ -86,7 +101,7 @@ namespace ArraySorts
         }
 
         /// <summary>
-        /// This private method merged two arrays,use for merge sort algorithm
+        /// This private method sorting array using merge sort algorithm
         /// </summary>
         /// <param name="left"></param>
         /// <param name="right"></param>

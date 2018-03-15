@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySorts", "ArraySorts\Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySorts.Tests", "ArraySorts.Tests\ArraySorts.Tests.csproj", "{44DBC8FB-7859-47BC-8349-7BFE1015E294}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiFileStrongNamedAssembly", "MultiFileStrongNamedAssembly\MultiFileStrongNamedAssembly.csproj", "{5AFBC5AA-AC66-4D2D-B903-E295C48F4072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForMultiFileStrongNamedAssembly", "ConsoleAppForMultiFileStrongNamedAssembly\ConsoleAppForMultiFileStrongNamedAssembly.csproj", "{D6BAAD97-4046-49AB-A2FC-9E76A116DA15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{44DBC8FB-7859-47BC-8349-7BFE1015E294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44DBC8FB-7859-47BC-8349-7BFE1015E294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44DBC8FB-7859-47BC-8349-7BFE1015E294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AFBC5AA-AC66-4D2D-B903-E295C48F4072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AFBC5AA-AC66-4D2D-B903-E295C48F4072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AFBC5AA-AC66-4D2D-B903-E295C48F4072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AFBC5AA-AC66-4D2D-B903-E295C48F4072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6BAAD97-4046-49AB-A2FC-9E76A116DA15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6BAAD97-4046-49AB-A2FC-9E76A116DA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6BAAD97-4046-49AB-A2FC-9E76A116DA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6BAAD97-4046-49AB-A2FC-9E76A116DA15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

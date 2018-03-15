@@ -1,0 +1,6 @@
+E:\Epam\NET.S.2018.Belyi.01\MultiFileStrongNamedAssembly\bin\Debug\MultiFileStrongNamedAssembly.dll
+E:\Epam\NET.S.2018.Belyi.01\MultiFileStrongNamedAssembly\bin\Debug\MultiFileStrongNamedAssembly.pdb
+E:\Epam\NET.S.2018.Belyi.01\MultiFileStrongNamedAssembly\obj\Debug\MultiFileStrongNamedAssembly.csprojResolveAssemblyReference.cache
+E:\Epam\NET.S.2018.Belyi.01\MultiFileStrongNamedAssembly\obj\Debug\MultiFileStrongNamedAssembly.csproj.CoreCompileInputs.cache
+E:\Epam\NET.S.2018.Belyi.01\MultiFileStrongNamedAssembly\obj\Debug\MultiFileStrongNamedAssembly.dll
+E:\Epam\NET.S.2018.Belyi.01\MultiFileStrongNamedAssembly\obj\Debug\MultiFileStrongNamedAssembly.pdb
