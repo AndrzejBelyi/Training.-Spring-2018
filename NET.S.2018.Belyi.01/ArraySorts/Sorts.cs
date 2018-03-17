@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ArraySorts
 {
@@ -11,7 +14,8 @@ namespace ArraySorts
         /// <summary>
         /// Used to sort array using quick sort algorithm
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">array which must be sort</param>
+        /// <exception cref="ArgumentNullException">Null reference of the array.</exception>
         public static void QuickSort(int[] array)
         {
             if (array == null)
@@ -26,40 +30,30 @@ namespace ArraySorts
                 }
             }
         }
-
         /// <summary>
         /// Used to sort array using merge sort algorithm
         /// </summary>
-        /// <param name="array"></param>
-        /// <returns>Return sorted array</returns>
-        public static int[] MergeSort(int[] array)
+        /// <param name="array">array which must be sort</param>
+        /// <exception cref="ArgumentNullException">Null reference of the array.</exception>
+        public static void MergeSort(int[] array)
         {
             if (array == null)
             {
                 throw new ArgumentNullException();
             }
-            else
+
+            if (array.Length > 1)
             {
-                if (array.Length > 1)
-                {
-                    int middle = array.Length / 2;
-                    int[] left = array.Take(middle).ToArray();
-                    int[] right = array.Skip(middle).ToArray();
-                    return Merge(MergeSort(left), MergeSort(right));
-                }
-                else
-                {
-                    return array;
-                }
+                Merge(array, 0, array.Length - 1);
             }
         }
 
         /// <summary>
         /// This private recursive method used to sort array using quick sort algorithm 
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="first"></param>
-        /// <param name="last"></param>
+        /// <param name="array">array which must be sort</param>
+        /// <param name="first">left index of the part of the array</param>
+        /// <param name="last">right index of the part of the array</param>
         private static void QuickSort(int[] array, int first, int last)
         {
             int pivotElement = array[((last - first) / 2) + first];
@@ -100,44 +94,53 @@ namespace ArraySorts
         /// <summary>
         /// This private method sorting array using merge sort algorithm
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <returns>return merged array</returns>
-        private static int[] Merge(int[] left, int[] right)
+        /// <param name="array">array which must be sort</param>
+        /// <param name="first">left index of the part of the array</param>
+        /// <param name="last">right index of the part of the array</param>
+        private static void Merge(int[] array, int first, int last)
         {
-            int j = 0, k = 0;
-            int[] merged = new int[left.Length + right.Length]; 
-            for (int i = 0; i < merged.Length; i++)
+            int arraySize = last - first + 1;
+            if (arraySize < 2)
             {
-                if (j < left.Length && k < right.Length)
+                return;
+            }
+
+            int mid = (first + last) / 2;
+            Merge(array, first, mid);
+            Merge(array, mid + 1, last);
+
+            int[] temp = new int[arraySize];
+            int i = first;
+            int j = mid + 1;
+            for (int k = 0; k < arraySize; k++)
+            {
+                if (i > mid)
                 {
-                    if (left[j] < right[k])
-                    {
-                        merged[i] = left[j];
-                        j++;
-                    }
-                    else
-                    {
-                        merged[i] = right[k];
-                        k++;
-                    }
+                    temp[k] = array[j++];
                 }
                 else
                 {
-                    if (k < right.Length)
+                    if (j > last)
                     {
-                        merged[i] = right[k];
-                        k++;
+                        temp[k] = array[i++];
                     }
                     else
                     {
-                        merged[i] = left[j];
-                        j++;
+                        if (array[j] < array[i])
+                        {
+                            temp[k] = array[j++];
+                        }
+                        else
+                        {
+                            temp[k] = array[i++];
+                        }
                     }
                 }
             }
-
-            return merged;
+            for (int k = 0; k < arraySize; k++)
+            {
+                array[first + k] = temp[k];
+            }
         }
     }
 }
