@@ -4,3 +4,9 @@ E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.csprojResolv
 E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.csproj.CoreCompileInputs.cache
 E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.dll
 E:\Epam\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.pdb
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\bin\Debug\FiltersLibrary.dll
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\bin\Debug\FiltersLibrary.pdb
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.csprojResolveAssemblyReference.cache
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.csproj.CoreCompileInputs.cache
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.dll
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.pdb
