@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersLibrary", "FiltersLibrary\FiltersLibrary.csproj", "{1E54A88A-9B6C-47DD-AC2B-E970FD7F07C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsLibrary", "FiltersLibrary\AlgorithmsLibrary.csproj", "{1E54A88A-9B6C-47DD-AC2B-E970FD7F07C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersLibrary.Tests", "FiltersLibrary.Tests\FiltersLibrary.Tests.csproj", "{AE0DB8CF-DB89-43E8-AE26-2D61A35B25EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsLibrary.Tests", "FiltersLibrary.Tests\AlgorithmsLibrary.Tests.csproj", "{AE0DB8CF-DB89-43E8-AE26-2D61A35B25EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiltersLibrary.TestsNUnit", "FiltersLibrary.TestsNUnit\FiltersLibrary.TestsNUnit.csproj", "{C288B5F6-10FC-4C87-B01A-C11CFEBDE1B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsLibrary.TestsNUnit", "FiltersLibrary.TestsNUnit\AlgorithmsLibrary.TestsNUnit.csproj", "{C288B5F6-10FC-4C87-B01A-C11CFEBDE1B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -49,16 +49,16 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FiltersTests.cs" />
+    <Compile Include="AlgorithmsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FiltersLibrary\FiltersLibrary.csproj">
+    <ProjectReference Include="..\FiltersLibrary\AlgorithmsLibrary.csproj">
       <Project>{1e54a88a-9b6c-47dd-ac2b-e970fd7f07c9}</Project>
-      <Name>FiltersLibrary</Name>
+      <Name>AlgorithmsLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

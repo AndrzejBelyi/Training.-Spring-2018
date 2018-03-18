@@ -10,8 +10,49 @@ namespace FiltersLibrary
     /// <summary>
     /// Class have some methods to filter,find,insert 
     /// </summary>
-    public class Filters
+    public class Algorithms
     {
+        /// <summary>
+        /// InsertNumber algorithm for inserting bits of one number into another
+        /// </summary>
+        /// <param name="firstNumber">Number to input</param>
+        /// <param name="secondNumber">Number as source</param>
+        /// <param name="firstIndex">index to copy "From"</param>
+        /// <param name="lastIndex">index to copy "To"</param>
+        /// <returns>Returns integer after insert</returns>
+        public static int InsertNumber(int firstNumber, int secondNumber, int firstIndex, int lastIndex)
+        {
+            if (firstIndex > lastIndex)
+            {
+                throw new ArgumentException();
+            }
+
+            if (firstIndex > 32)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            if (firstIndex > 32)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            int[] firstNumberArray = GetBinaryArrayFromInt(firstNumber);
+            int[] secondNumberArray = GetBinaryArrayFromInt(secondNumber);
+            int size = lastIndex - firstIndex + 1;
+            int[] temp = secondNumberArray.Skip(secondNumberArray.Length - size).ToArray();
+            int m = 0;
+            Array.Reverse(firstNumberArray);
+            Array.Reverse(temp);
+            for (int i = firstIndex; i <= lastIndex; i++)
+            {
+                firstNumberArray[i] = temp[m++];
+            }
+
+            Array.Reverse(firstNumberArray);
+            return GetIntByBinaryArray(firstNumberArray);
+        }
+
         /// <summary>
         /// Method find and returns next integer number which 
         /// consists of the same numbers
@@ -239,11 +280,11 @@ namespace FiltersLibrary
         }
 
         /// <summary>
-        /// Method used fo swap to elemnts in array 
+        /// Method used to swap to elements in array 
         /// </summary>
         /// <param name="array">Array to replacement </param>
-        /// <param name="i">Indexes of swaped elements</param>
-        /// <param name="j">Indexes of swaped elements</param>
+        /// <param name="i">Index of first element</param>
+        /// <param name="j">Index of second element</param>
         private static void Swap(int[] array, int i, int j)
         {
             int temp = array[i];
@@ -251,6 +292,12 @@ namespace FiltersLibrary
             array[j] = temp;
         }
 
+        /// <summary>
+        /// Checking if number contains digit
+        /// </summary>
+        /// <param name="number">Number to search</param>
+        /// <param name="digit">Digit for search in number</param>
+        /// <returns>true if contains,else - false</returns>
         private static bool IsContainsDigit(int number, int digit)
         {
             while (number != 0)
@@ -264,6 +311,34 @@ namespace FiltersLibrary
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Returns a number in the binary representation as an array
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns>array</returns>
+        private static int[] GetBinaryArrayFromInt(int number)
+        {
+            string binaryNumber = Convert.ToString(number, 2).PadLeft(32, '0');
+            int[] binaryNumberArray = new int[32];
+            for (int i = 0; i < binaryNumberArray.Length; i++)
+            {
+                binaryNumberArray[i] = (int)char.GetNumericValue(binaryNumber[i]);
+            }
+
+            return binaryNumberArray;
+        }
+
+        /// <summary>
+        /// Returns a number in the decimal number system getting a binary array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
+        private static int GetIntByBinaryArray(int[] array)
+        {
+            string result = string.Join(string.Empty, array);
+            return Convert.ToInt32(result, 2);
         }
     }
 }

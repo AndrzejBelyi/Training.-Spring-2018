@@ -1,0 +1,6 @@
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\bin\Debug\FiltersLibrary.dll
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\bin\Debug\FiltersLibrary.pdb
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\AlgorithmsLibrary.csprojResolveAssemblyReference.cache
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\AlgorithmsLibrary.csproj.CoreCompileInputs.cache
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.dll
+e:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.02\FiltersLibrary\obj\Debug\FiltersLibrary.pdb

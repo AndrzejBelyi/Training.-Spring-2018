@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FiltersTestsNUnit.cs" />
+    <Compile Include="AlgorithmsTestsNUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,9 +57,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FiltersLibrary\FiltersLibrary.csproj">
+    <ProjectReference Include="..\FiltersLibrary\AlgorithmsLibrary.csproj">
       <Project>{1e54a88a-9b6c-47dd-ac2b-e970fd7f07c9}</Project>
-      <Name>FiltersLibrary</Name>
+      <Name>AlgorithmsLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

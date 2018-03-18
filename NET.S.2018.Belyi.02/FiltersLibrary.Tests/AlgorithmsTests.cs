@@ -9,7 +9,7 @@ namespace FiltersLibrary.Tests
     /// Test class include some test methods for DigitFilter method
     /// </summary>
     [TestClass]
-    public class FiltersTests
+    public class AlgorithmsTests
     {
         /// <summary>
         /// This is a method for verifying the algorithm for filtering an array on valid data
@@ -19,7 +19,7 @@ namespace FiltersLibrary.Tests
         {
             int[] actualArray = new int[13] { 7, 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17 };
             int[] expectedArray = new int[4] { 7, 7, 70, 17 };
-            actualArray = Filters.FilterDigit(actualArray, 7);
+            actualArray = Algorithms.FilterDigit(actualArray, 7);
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
@@ -31,7 +31,7 @@ namespace FiltersLibrary.Tests
         {
             int[] actualArray = new int[4] { 7, 7, 70, 17 };
             int[] expectedArray = new int[4] { 7, 7, 70, 17 };
-            actualArray = Filters.FilterDigit(actualArray, 7);
+            actualArray = Algorithms.FilterDigit(actualArray, 7);
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
@@ -43,7 +43,7 @@ namespace FiltersLibrary.Tests
         public void DigitFilter_ArrayNullReference_ArgumentNullException()
         {
             int[] actualArray = null;
-            Filters.FilterDigit(actualArray, 7);
+            Algorithms.FilterDigit(actualArray, 7);
             CollectionAssert.AreEqual(null, actualArray);
         }
 
@@ -56,7 +56,7 @@ namespace FiltersLibrary.Tests
         {
             int[] actualArray = new int[4] { 7, 7, 70, 17 };
             int[] expectedArray = new int[4] { 7, 7, 70, 17 };
-            actualArray = Filters.FilterDigit(actualArray, 11);
+            actualArray = Algorithms.FilterDigit(actualArray, 11);
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
@@ -66,7 +66,7 @@ namespace FiltersLibrary.Tests
             int[] array = Enumerable.Range(1, 7000000).ToArray();
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            Filters.FilterDigit(array, 7);
+            Algorithms.FilterDigit(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
         }
@@ -77,7 +77,7 @@ namespace FiltersLibrary.Tests
             int[] array = Enumerable.Range(1, 7000000).ToArray();
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            Filters.FilterDigit0(array, 7);
+            Algorithms.FilterDigit0(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
         }
@@ -88,7 +88,7 @@ namespace FiltersLibrary.Tests
             int[] array = Enumerable.Range(1, 7000000).ToArray();
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            Filters.FilterDigit1(array, 7);
+            Algorithms.FilterDigit1(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
         }
@@ -99,7 +99,7 @@ namespace FiltersLibrary.Tests
             int[] array = Enumerable.Range(1, 7000000).ToArray();
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            Filters.FilterDigit2(array, 7);
+            Algorithms.FilterDigit2(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
         }
@@ -110,7 +110,7 @@ namespace FiltersLibrary.Tests
             int[] array = Enumerable.Range(1, 7000000).ToArray();
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            Filters.FilterDigit3(array, 7);
+            Algorithms.FilterDigit3(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
         }

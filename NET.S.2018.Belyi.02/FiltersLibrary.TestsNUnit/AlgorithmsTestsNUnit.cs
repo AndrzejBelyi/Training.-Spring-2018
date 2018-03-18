@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace FiltersLibrary.TestsNUnit
 {
     [TestFixture]
-    public class FiltersTestsNUnit
+    public class AlgorithmsTestsNUnit
     {
         #region FindNextBiggerNumberTests
         [Test]
@@ -22,20 +22,20 @@ namespace FiltersLibrary.TestsNUnit
         [TestCase(20, -1)]
         public void FindNextBiggerNumber_Number_NextBiggerNumber(int number, int expectedResult)
         {
-            int actualResult = Filters.FindNextBiggerNumber(number);
+            int actualResult = Algorithms.FindNextBiggerNumber(number);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
         public void FindNextBiggerNumber_NegativeNumber_ArgumentException()
         {
-            Assert.That(() => Filters.FindNextBiggerNumber(-2), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => Algorithms.FindNextBiggerNumber(-2), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void FindNextBiggerNumber_MaxValue_NoException()
         {
-            Filters.FindNextBiggerNumber(2147483647);
+            Algorithms.FindNextBiggerNumber(2147483647);
         }
         #endregion FindNextBiggerNumberTests
         #region FilterDigitTests
@@ -50,7 +50,7 @@ namespace FiltersLibrary.TestsNUnit
         [TestCase(new int[] { 7, 7, 70, 17 }, new int[] { 7, 7, 70, 17 }, 7)]
         public void FilterDigit_UnfilteredArray_FilteredArray(int[] actualArray, int[] expectedArray, int targetDigit)
         {
-            actualArray = Filters.FilterDigit(actualArray, targetDigit);
+            actualArray = Algorithms.FilterDigit(actualArray, targetDigit);
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
@@ -60,7 +60,7 @@ namespace FiltersLibrary.TestsNUnit
         [Test]
         public void FilterDigit_ArrayNullReference_ArgumentNullException()
         {
-            Assert.That(() => Filters.FilterDigit(null, 5), Throws.TypeOf<ArgumentNullException>());
+            Assert.That(() => Algorithms.FilterDigit(null, 5), Throws.TypeOf<ArgumentNullException>());
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace FiltersLibrary.TestsNUnit
         [Test]
         public void FilterDigit_TargetDigitIsNotDigit_ArgumentException()
         {
-            Assert.That(() => Filters.FilterDigit(new int[] { 1, 2, 3 }, 11), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => Algorithms.FilterDigit(new int[] { 1, 2, 3 }, 11), Throws.TypeOf<ArgumentException>());
         }
         #endregion filterDigitTests
     }
