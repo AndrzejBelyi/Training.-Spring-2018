@@ -63,13 +63,12 @@ namespace FiltersLibrary.Tests
         [TestMethod]
         public void DigitFilter_Perfomance()
         {
-            int[] array = Enumerable.Range(1,7000000).ToArray();
+            int[] array = Enumerable.Range(1, 7000000).ToArray();
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             Filters.FilterDigit(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
-
         }
 
         [TestMethod]
@@ -81,7 +80,6 @@ namespace FiltersLibrary.Tests
             Filters.FilterDigit0(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
-
         }
 
         [TestMethod]
@@ -93,7 +91,6 @@ namespace FiltersLibrary.Tests
             Filters.FilterDigit1(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
-
         }
 
         [TestMethod]
@@ -105,7 +102,6 @@ namespace FiltersLibrary.Tests
             Filters.FilterDigit2(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
-
         }
 
         [TestMethod]
@@ -117,7 +113,6 @@ namespace FiltersLibrary.Tests
             Filters.FilterDigit3(array, 7);
             stopWatch.Stop();
             Console.WriteLine("Время сортировки 10000000 элементов: " + stopWatch.Elapsed);
-
         }
     }
 }

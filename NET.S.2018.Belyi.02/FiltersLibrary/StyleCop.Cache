@@ -29,14 +29,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="-236607620">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="Filters.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018.03.11 22:04:08.424</styleCop>
       <settingsFile>2018.03.15 16:23:21.270</settingsFile>
-      <sourceFile>2018.03.17 18:21:02.207</sourceFile>
+      <sourceFile>2018.03.18 13:22:43.116</sourceFile>
       <parser>2018.03.11 22:04:08.424</parser>
       <StyleCop.CSharp.DocumentationRules>2018.03.11 22:04:08.424</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>725307449</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -53,6 +50,20 @@
       <StyleCop.CSharp.SpacingRules>2018.03.11 22:04:08.424</StyleCop.CSharp.SpacingRules>
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
-    <violations />
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementDocumentationMustBeSpelledCorrectly" ruleCheckId="SA1650">
+        <context>The documentation text within the summary tag contains incorrectly spelled words: 'fo', 'elemnts'</context>
+        <line>247</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementDocumentationMustBeSpelledCorrectly" ruleCheckId="SA1650">
+        <context>The documentation text within the param tag contains incorrectly spelled words: 'swaped'</context>
+        <line>247</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
   </sourcecode>
+  <project key="-236607620">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
 </stylecopresultscache>

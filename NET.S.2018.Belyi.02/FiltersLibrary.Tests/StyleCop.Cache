@@ -6,11 +6,11 @@
   <project key="862571339">
     <configuration>DEBUG;TRACE</configuration>
   </project>
-  <sourcecode name="FiltersTests.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018.03.11 22:04:08.424</styleCop>
       <settingsFile>2018.03.15 17:21:53.899</settingsFile>
-      <sourceFile>2018.03.15 19:05:30.683</sourceFile>
+      <sourceFile>2018.03.15 16:24:25.236</sourceFile>
       <parser>2018.03.11 22:04:08.424</parser>
       <StyleCop.CSharp.DocumentationRules>2018.03.11 22:04:08.424</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>725307449</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -29,11 +29,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="FiltersTests.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018.03.11 22:04:08.424</styleCop>
       <settingsFile>2018.03.15 17:21:53.899</settingsFile>
-      <sourceFile>2018.03.15 16:24:25.236</sourceFile>
+      <sourceFile>2018.03.18 13:23:11.062</sourceFile>
       <parser>2018.03.11 22:04:08.424</parser>
       <StyleCop.CSharp.DocumentationRules>2018.03.11 22:04:08.424</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>725307449</StyleCop.CSharp.DocumentationRules.FilesHashCode>

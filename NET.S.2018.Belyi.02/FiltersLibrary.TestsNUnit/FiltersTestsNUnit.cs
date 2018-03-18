@@ -10,7 +10,6 @@ namespace FiltersLibrary.TestsNUnit
     [TestFixture]
     public class FiltersTestsNUnit
     {
-
         #region FindNextBiggerNumberTests
         [Test]
         [TestCase(12, 21)]
@@ -21,7 +20,7 @@ namespace FiltersLibrary.TestsNUnit
         [TestCase(3456432, 3462345)]
         [TestCase(10, -1)]
         [TestCase(20, -1)]
-        public void FindNextBiggerNumber_Number_NextBiggerNumber(int number,int expectedResult)
+        public void FindNextBiggerNumber_Number_NextBiggerNumber(int number, int expectedResult)
         {
             int actualResult = Filters.FindNextBiggerNumber(number);
             Assert.AreEqual(expectedResult, actualResult);
