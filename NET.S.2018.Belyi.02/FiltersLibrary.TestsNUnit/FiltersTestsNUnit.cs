@@ -10,6 +10,36 @@ namespace FiltersLibrary.TestsNUnit
     [TestFixture]
     public class FiltersTestsNUnit
     {
+
+        #region FindNextBiggerNumberTests
+        [Test]
+        [TestCase(12, 21)]
+        [TestCase(513, 531)]
+        [TestCase(2017, 2071)]
+        [TestCase(1234321, 1241233)]
+        [TestCase(1234126, 1234162)]
+        [TestCase(3456432, 3462345)]
+        [TestCase(10, -1)]
+        [TestCase(20, -1)]
+        public void FindNextBiggerNumber_Number_NextBiggerNumber(int number,int expectedResult)
+        {
+            int actualResult = Filters.FindNextBiggerNumber(number);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void FindNextBiggerNumber_NegativeNumber_ArgumentException()
+        {
+            Assert.That(() => Filters.FindNextBiggerNumber(-2), Throws.TypeOf<ArgumentException>());
+        }
+
+        [Test]
+        public void FindNextBiggerNumber_MaxValue_NoException()
+        {
+            Filters.FindNextBiggerNumber(2147483647);
+        }
+        #endregion FindNextBiggerNumberTests
+        #region FilterDigitTests
         /// <summary>
         /// This is a method for verifying the algorithm for filtering an array on valid data
         /// </summary>
@@ -42,5 +72,6 @@ namespace FiltersLibrary.TestsNUnit
         {
             Assert.That(() => Filters.FilterDigit(new int[] { 1, 2, 3 }, 11), Throws.TypeOf<ArgumentException>());
         }
+        #endregion filterDigitTests
     }
 }
