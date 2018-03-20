@@ -10,11 +10,30 @@ namespace FiltersLibrary.TestsNUnit
     [TestFixture]
     public class AlgorithmsTestsNUnit
     {
+        #region InsertNumberTests
+        [Test]
+        [TestCase(15, 15, 0, 0, ExpectedResult = 15)]
+        [TestCase(8, 15, 0, 0, ExpectedResult = 9)]
+        [TestCase(8, 15, 3, 8, ExpectedResult = 120)]
+        [TestCase(-8, 15, 0, 31, ExpectedResult = 15)]
+        [TestCase(8, -15, 0, 31, ExpectedResult = -15)]
+        public int InsertNumber_ValidData(int firstNumber, int secondNumber, int firstIndex, int lastIndex)
+            => Algorithms.InsertNumber(firstNumber, secondNumber, firstIndex, lastIndex);
+
+        [Test]
+        [TestCase(15, 15, 5, 4)]
+        [TestCase(8, 15, -10, 0)]
+        [TestCase(8, 15, 0, 32)]
+        public void InsertNumberTest_InvalidData(int firstNumber, int secondNumber, int firstIndex, int lastIndex)
+            => Assert.Throws<ArgumentOutOfRangeException>(() => Algorithms.InsertNumber(firstNumber, secondNumber, firstIndex, lastIndex));
+
+        #endregion InsertumberTests
         #region FindNextBiggerNumberTests
         [Test]
         [TestCase(12, 21)]
         [TestCase(513, 531)]
         [TestCase(2017, 2071)]
+        [TestCase(414, 441)]
         [TestCase(1234321, 1241233)]
         [TestCase(1234126, 1234162)]
         [TestCase(3456432, 3462345)]

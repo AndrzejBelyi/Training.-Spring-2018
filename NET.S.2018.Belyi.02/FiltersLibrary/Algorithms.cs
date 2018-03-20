@@ -20,19 +20,20 @@ namespace FiltersLibrary
         /// <param name="firstIndex">index to copy "From"</param>
         /// <param name="lastIndex">index to copy "To"</param>
         /// <returns>Returns integer after insert</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Error when one of index >32 or firstIndex>lastIndex </exception>
         public static int InsertNumber(int firstNumber, int secondNumber, int firstIndex, int lastIndex)
         {
             if (firstIndex > lastIndex)
             {
-                throw new ArgumentException();
+                throw new ArgumentOutOfRangeException();
             }
 
-            if (firstIndex > 32)
+            if (firstIndex > 31 || firstIndex < 0)
             {
                 throw new ArgumentOutOfRangeException();
             }
 
-            if (firstIndex > 32)
+            if (lastIndex > 31 || lastIndex < 0)
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -94,7 +95,7 @@ namespace FiltersLibrary
             }
 
             Swap(digitArray, i - 1, min);
-            Array.Reverse(digitArray, i, n - i);
+            Array.Sort(digitArray, i, n - i);
             return GetIntNumberFromDigitsArray(digitArray);
         }
 
@@ -336,9 +337,10 @@ namespace FiltersLibrary
         /// <param name="array"></param>
         /// <returns></returns>
         private static int GetIntByBinaryArray(int[] array)
-        {
+        {           
             string result = string.Join(string.Empty, array);
-            return Convert.ToInt32(result, 2);
+            int number = Convert.ToInt32(result, 2);
+            return number;
         }
     }
 }
