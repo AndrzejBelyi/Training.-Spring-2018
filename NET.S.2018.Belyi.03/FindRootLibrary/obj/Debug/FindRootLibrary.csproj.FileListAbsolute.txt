@@ -1,0 +1,6 @@
+E:\GitHub\NET.S.2018.Belyi.03\FindRootLibrary\bin\Debug\FindRootLibrary.dll
+E:\GitHub\NET.S.2018.Belyi.03\FindRootLibrary\bin\Debug\FindRootLibrary.pdb
+E:\GitHub\NET.S.2018.Belyi.03\FindRootLibrary\obj\Debug\FindRootLibrary.csprojResolveAssemblyReference.cache
+E:\GitHub\NET.S.2018.Belyi.03\FindRootLibrary\obj\Debug\FindRootLibrary.csproj.CoreCompileInputs.cache
+E:\GitHub\NET.S.2018.Belyi.03\FindRootLibrary\obj\Debug\FindRootLibrary.dll
+E:\GitHub\NET.S.2018.Belyi.03\FindRootLibrary\obj\Debug\FindRootLibrary.pdb
