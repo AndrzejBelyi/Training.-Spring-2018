@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6F57B128-1876-4719-B2E4-264E9655AA3B}</ProjectGuid>
+    <ProjectGuid>{26EFDFD1-1989-4E57-849A-0AA389562105}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Task3Library.Tests</RootNamespace>
-    <AssemblyName>Task3Library.Tests</AssemblyName>
+    <RootNamespace>Task2Library.Tests</RootNamespace>
+    <AssemblyName>Task2Library.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -47,21 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConverterWithNoNotationTests.cs" />
-    <Compile Include="ConverterWithNotationTests.cs" />
+    <Compile Include="DoubleToIEEE754Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Task3Library\Task3Library.csproj">
-      <Project>{390b53db-7b0e-42b4-9d47-53012bb9222b}</Project>
-      <Name>Task3Library</Name>
+    <ProjectReference Include="..\Task2Library\Task2Library.csproj">
+      <Project>{4c56c25c-1743-4635-9e7c-cee3180a9d97}</Project>
+      <Name>Task2Library</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

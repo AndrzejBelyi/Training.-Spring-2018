@@ -13,7 +13,7 @@ namespace Task3Library
         /// </summary>
         /// <param name="number"></param>
         /// <param name="notation"></param>
-        /// <returns>retruns integer</returns>
+        /// <returns>returns integer</returns>
         public static int ToDec(this string number, Notation notation)
         {
             if (String.IsNullOrEmpty(number))
