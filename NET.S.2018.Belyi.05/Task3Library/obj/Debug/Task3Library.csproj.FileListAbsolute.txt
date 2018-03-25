@@ -1,6 +1,5 @@
 E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library\bin\Debug\Task3Library.dll
 E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library\bin\Debug\Task3Library.pdb
-E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library\obj\Debug\Task3Library.csprojResolveAssemblyReference.cache
 E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library\obj\Debug\Task3Library.csproj.CoreCompileInputs.cache
 E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library\obj\Debug\Task3Library.dll
 E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library\obj\Debug\Task3Library.pdb
