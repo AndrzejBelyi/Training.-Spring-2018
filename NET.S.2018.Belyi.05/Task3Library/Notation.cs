@@ -64,7 +64,11 @@ namespace Task3Library
             NotationBase = notationBase;
             ActualTable = BaseTable.Substring(0, notationBase);
         }
-
+        /// <summary>
+        /// Check if number is valid 
+        /// </summary>
+        /// <param name="number">Number as string</param>
+        /// <returns>Return true if data is valid</returns>
         public bool IsValidNumber(string number)
         {
             foreach (char item in number.ToUpper())
