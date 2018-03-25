@@ -1,0 +1,17 @@
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\NUnit3.TestAdapter.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\NUnit3.TestAdapter.pdb
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\nunit.engine.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\nunit.engine.api.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\Mono.Cecil.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\Task3Library.Tests.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\Task3Library.Tests.pdb
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\nunit.framework.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\nunit.framework.pdb
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\nunit.framework.xml
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\obj\Debug\Task3Library.Tests.csprojResolveAssemblyReference.cache
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\obj\Debug\Task3Library.Tests.csproj.CoreCompileInputs.cache
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\obj\Debug\Task3Library.Tests.csproj.CopyComplete
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\obj\Debug\Task3Library.Tests.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\obj\Debug\Task3Library.Tests.pdb
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\Task3Library.dll
+E:\GitHub\Training.-Spring-2018\NET.S.2018.Belyi.05\Task3Library.Tests\bin\Debug\Task3Library.pdb
