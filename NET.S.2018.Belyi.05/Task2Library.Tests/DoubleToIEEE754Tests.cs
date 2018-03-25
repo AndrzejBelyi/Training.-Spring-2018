@@ -21,7 +21,7 @@ namespace Task2Library.Tests
         [TestCase(double.PositiveInfinity, "0111111111110000000000000000000000000000000000000000000000000000")]
         [TestCase(-0.0, "1000000000000000000000000000000000000000000000000000000000000000")]
         [TestCase(0.0, "0000000000000000000000000000000000000000000000000000000000000000")]
-        public void DoubleIn64BitsTest(double number, string expectedResult)
+        public void DoubleTo64BinaryStringTest(double number, string expectedResult)
         {           
             Assert.AreEqual(expectedResult, number.DoubleTo64BinaryString());
         }
