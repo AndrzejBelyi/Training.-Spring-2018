@@ -8,7 +8,7 @@ namespace Task1.Tests
 {
     public class PolynomialTests
     {
-        Polynomial poly =new Polynomial(1,2.2,3,4.11,5,6,7);
+        Polynomial poly =new Polynomial(1, 2.2, 3, 4.11, 5, 6, 7);
 
         [Test]
         public void Constructor_ArgumentException()
@@ -19,7 +19,7 @@ namespace Task1.Tests
         [Test]
         public void Equals_ValidParams_Equals()
         {
-            Polynomial polynomial1 = new Polynomial(1,2.2,3,4.11,5,6,7);
+            Polynomial polynomial1 = new Polynomial(1, 2.2, 3, 4.11, 5, 6, 7);
             Assert.AreEqual(true, polynomial1.Equals(poly));
         }
 

@@ -6,6 +6,7 @@ namespace Task1
 {
     public sealed class Polynomial
     {
+        #region Constructors,fields,properties.
         /// <summary>
         /// Coefficients of polynomial
         /// </summary>
@@ -30,8 +31,8 @@ namespace Task1
         /// <summary>
         /// Static constructor for setting the value of the variable "eps"
         /// </summary>
-        static Polynomial()
-        {
+            static Polynomial()
+            {
 #pragma warning disable CS0618 // Type or member is obsolete
             string str = ConfigurationSettings.AppSettings.Get("eps");
 #pragma warning restore CS0618 // Type or member is obsolete
@@ -53,7 +54,8 @@ namespace Task1
         {
             get { return coefficients.Length; }
         }
-
+        #endregion Constructors,fields,properties.
+        #region Operators
         /// <summary>
         /// Returns true if polynomials are equal,else returns false
         /// </summary>
@@ -165,7 +167,8 @@ namespace Task1
 
             return new Polynomial(result);
         }
-
+        #endregion Operators
+        #region Methods
         /// <summary>
         /// Compares instance of polynomial class and object and return true if are equal
         /// </summary>
@@ -254,5 +257,6 @@ namespace Task1
         {
             return coefficients.GetHashCode();
         }
+        #endregion Methods
     }
 }
