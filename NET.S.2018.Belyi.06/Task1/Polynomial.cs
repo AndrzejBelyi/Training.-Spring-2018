@@ -33,12 +33,13 @@ namespace Task1
         /// </summary>
             static Polynomial()
             {
-#pragma warning disable CS0618 // Type or member is obsolete
-            string str = ConfigurationSettings.AppSettings.Get("eps");
-#pragma warning restore CS0618 // Type or member is obsolete
-
             try
             {
+#pragma warning disable CS0618 // Type or member is obsolete
+                string str = ConfigurationSettings.AppSettings.Get("eps");
+#pragma warning restore CS0618 // Type or member is obsolete
+
+            
                 eps = Double.Parse(str);
             }
             catch (Exception)
