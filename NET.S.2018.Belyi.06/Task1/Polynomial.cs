@@ -64,6 +64,16 @@ namespace Task1
         /// <returns>Returns the bool result of the comparison<returns>
         public static bool operator ==(Polynomial firstPolynomial, Polynomial secondPolynomial)
         {
+            if (firstPolynomial == null)
+            {
+                throw new ArgumentNullException(nameof(firstPolynomial));
+            }
+
+            if (secondPolynomial == null)
+            {
+                throw new ArgumentNullException(nameof(secondPolynomial));
+            }
+
             return firstPolynomial.Equals(secondPolynomial);
         }
 
@@ -75,6 +85,16 @@ namespace Task1
         /// <returns>Returns the bool result of the comparison<returns>
         public static bool operator !=(Polynomial firstPolynomial, Polynomial secondPolynomial)
         {
+            if (firstPolynomial == null)
+            {
+                throw new ArgumentNullException(nameof(firstPolynomial));
+            }
+
+            if (secondPolynomial == null)
+            {
+                throw new ArgumentNullException(nameof(secondPolynomial));
+            }
+
             return !firstPolynomial.Equals(secondPolynomial);
         }
 
@@ -180,17 +200,12 @@ namespace Task1
             {
                 return false;
             }
-            else
+            if (ReferenceEquals(this, obj))
             {
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-                else
-                {
-                    return this.Equals((Polynomial)obj);
-                }
-            }            
+                return true;
+            }
+
+            return this.Equals((Polynomial)obj);            
         }
 
         /// <summary>
@@ -204,28 +219,22 @@ namespace Task1
             {
                 return false;
             }
-            else
+
+            if (ReferenceEquals(this, poly))
             {
-                if (ReferenceEquals(this, poly))
+                return true;
+            }
+
+            if (poly.Length != this.Length)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < poly.Length; i++)
+            {
+                if (Math.Abs(poly.coefficients[i] - this.coefficients[i]) > eps)
                 {
-                    return true;
-                }
-                else
-                {
-                    if (poly.Length != this.Length)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        for (int i = 0; i < poly.Length; i++)
-                        {
-                            if (Math.Abs(poly.coefficients[i] - this.coefficients[i]) > eps)
-                            {
-                                return false;
-                            }
-                        }
-                    }
+                    return false;
                 }
             }
 
