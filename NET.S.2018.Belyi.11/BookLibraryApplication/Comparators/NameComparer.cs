@@ -1,9 +1,6 @@
-﻿using BookLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BookLibrary;
 
 namespace BookLibraryApplication.Comparators
 {
@@ -11,10 +8,11 @@ namespace BookLibraryApplication.Comparators
     {
         public int Compare(Book x, Book y)
         {
-            if(ReferenceEquals(x,y))
+            if (ReferenceEquals(x, y))
             {
                 return 0;
             }
+
             return string.Compare(x.Title, y.Title, StringComparison.InvariantCultureIgnoreCase);
         }
     }

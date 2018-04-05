@@ -10,12 +10,9 @@ namespace BookLibrary
 {
     public sealed class BookListBinaryFileStorage : IBookListStorage
     {
-        private string Path { get; }
-        ILogger Logger { get; }
-
-        public BookListBinaryFileStorage(string path,ILogger logger = null)
+        public BookListBinaryFileStorage(string path, ILogger logger = null)
         { 
-            if(ReferenceEquals(logger,null))
+            if (ReferenceEquals(logger, null))
             {
                 Logger = new NLogger(); 
             }
@@ -23,18 +20,19 @@ namespace BookLibrary
             {
                 Logger = logger;
             }
+
             if (string.IsNullOrWhiteSpace(path))
             {
                 Logger.Error($"{nameof(path)} is null or empty");
                 throw new ArgumentNullException($"{nameof(path)} is null or empty");
             }
-            //if (!Directory.Exists(path))
-            //{
-            //    throw new DirectoryNotFoundException($"{path} is not exist!");
-            //}
 
             Path = path;
         }
+
+        private string Path { get; }
+
+        private ILogger Logger { get; }
 
         public void SaveToStorage(List<Book> books)
         {
@@ -43,6 +41,7 @@ namespace BookLibrary
                 Logger.Error($"{nameof(books)} is null");
                 throw new ArgumentNullException($"{nameof(books)} is null");
             }
+
             if (books.Count == 0)
             {
                 Logger.Error($"{nameof(books)} is null");
@@ -62,6 +61,7 @@ namespace BookLibrary
                     writer.Write(books[i].NumberOfPages);
                     writer.Write(books[i].Price);
                 }
+
                 Logger.Info($"Saving complete");
             }
         }
@@ -75,14 +75,13 @@ namespace BookLibrary
             {
                 while (reader.PeekChar() > -1)
                 {
-                    booksList.Add(new Book(reader.ReadString(), reader.ReadString(), reader.ReadString(), reader.ReadString(),
-                    reader.ReadString(), reader.ReadInt32(), reader.ReadDecimal()));
+                    booksList.Add(new Book(
+                        reader.ReadString(), reader.ReadString(), reader.ReadString(), reader.ReadString(), reader.ReadString(), reader.ReadInt32(), reader.ReadDecimal()));
                 }
             }
+
             Logger.Info($"Load complete");
             return booksList;
         }
-
-
     }
 }

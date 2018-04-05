@@ -4,14 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Logger;
+
 namespace BookLibrary
 {
-
     public sealed class BookListService
     {
-        public List<Book> bookList { get; private set; }
-        ILogger Logger { get; }
-
         public BookListService(ILogger logger = null)
         {
             if (ReferenceEquals(logger, null))
@@ -23,8 +20,12 @@ namespace BookLibrary
                 Logger = logger;
             }
 
-            bookList = new List<Book>();
+            BookList = new List<Book>();
         }
+
+        public List<Book> BookList { get; private set; }
+
+        private ILogger Logger { get; }
 
         public void AddBook(Book book)
         {
@@ -34,13 +35,13 @@ namespace BookLibrary
                 throw new ArgumentNullException($"{nameof(book)} is null");
             }
 
-            if (bookList.Contains(book))
+            if (BookList.Contains(book))
             {
                 Logger.Error($"{nameof(book)} is already exist!");
                 throw new ArgumentException($"{nameof(book)} is already exist!");
             }
 
-            bookList.Add(book);
+            BookList.Add(book);
             Logger.Info($"{nameof(book)} added!");
         }
 
@@ -52,11 +53,12 @@ namespace BookLibrary
                 throw new ArgumentNullException($"{nameof(book)} is null");
             }
 
-            if (!bookList.Remove(book))
+            if (!BookList.Remove(book))
             {
                 Logger.Error($"{nameof(book)} not exist!");
                 throw new ArgumentException($"{nameof(book)} is not exist!");
             }
+
             Logger.Info($"{nameof(book)} remove complete!");
         }
 
@@ -69,7 +71,7 @@ namespace BookLibrary
                 throw new ArgumentNullException($"{nameof(storage)} is null");
             }
 
-            storage.SaveToStorage(bookList);
+            storage.SaveToStorage(BookList);
             Logger.Info($"Saving to storage completed!");
         }
 
@@ -81,7 +83,7 @@ namespace BookLibrary
                 throw new ArgumentNullException($"{nameof(storage)} is null");
             }
 
-            bookList = storage.LoadFromStorage();
+            BookList = storage.LoadFromStorage();
             Logger.Info($"Loading from storage completed!");
         }
 
@@ -93,8 +95,9 @@ namespace BookLibrary
                 Logger.Error($"{nameof(comparer)} is null!");
                 throw new ArgumentNullException($"{nameof(comparer)} is null");
             }
+
             Logger.Info($"Sorting complete!");
-            bookList.Sort(comparer);
+            BookList.Sort(comparer);
         }
 
         public Book FindBookByTag(IBookPredicate<Book> criterion)
@@ -106,16 +109,17 @@ namespace BookLibrary
                 throw new ArgumentNullException($"{nameof(criterion)} is null");
             }
 
-            foreach(Book book in bookList)
+            foreach (Book book in BookList)
             {
-                if(criterion.IsAcceptable(book))
+                if (criterion.IsAcceptable(book))
                 {
                     Logger.Info($"Finded!");
                     return book;
                 }
             }
+
             Logger.Warning($"NOT FINDED!");
-            return bookList[0];
+            return BookList[0];
         }
     }
 }

@@ -1,15 +1,15 @@
-﻿using BookLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BookLibrary;
 
 namespace BookLibraryApplication.Tags
 {
-    class TitlePredicate : IBookPredicate<Book>
+    public class TitlePredicate : IBookPredicate<Book>
     {
-        string title;
+        private string title;
 
         public TitlePredicate(string title)
         {
@@ -17,11 +17,13 @@ namespace BookLibraryApplication.Tags
             {
                 throw new ArgumentNullException($"{nameof(title)} is null");
             }
+
             this.title = title;
         }
+
         public bool IsAcceptable(Book book)
         {
-            return string.Equals(this.title,book.Author) ? true : false;    
+            return string.Equals(this.title, book.Author) ? true : false;    
         }
     }
 }
