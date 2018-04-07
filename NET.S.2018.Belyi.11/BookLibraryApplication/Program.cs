@@ -41,8 +41,9 @@ namespace BookLibraryApplication
                 Console.WriteLine(b.ToString());
             }
 
+            CustomFormatProvider custom = new CustomFormatProvider();
             Console.WriteLine("\nПоиск по имени Антон Чехов:\n");            
-            Console.WriteLine(bookService.FindBookByTag(new Tags.TitlePredicate("Антон Чехов")).ToString());
+            Console.WriteLine(bookService.FindBookByTag(new Tags.TitlePredicate("Антон Чехов")).ToString("G",custom));
         }
     }
 }

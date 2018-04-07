@@ -10,6 +10,12 @@ namespace BookLibrary
 {
     public sealed class BookListBinaryFileStorage : IBookListStorage
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BookListBinaryFileStorage"/> class.
+        /// </summary>
+        /// <param name="path">The path.</param>
+        /// <param name="logger">The logger.</param>
+        /// <exception cref="ArgumentNullException">path</exception>
         public BookListBinaryFileStorage(string path, ILogger logger = null)
         { 
             if (ReferenceEquals(logger, null))
@@ -29,11 +35,28 @@ namespace BookLibrary
 
             Path = path;
         }
-
+        /// <summary>
+        /// Gets the path.
+        /// </summary>
+        /// <value>
+        /// The path.
+        /// </value>
         private string Path { get; }
 
+        /// <summary>
+        /// Gets the logger.
+        /// </summary>
+        /// <value>
+        /// The logger.
+        /// </value>
         private ILogger Logger { get; }
 
+        /// <summary>
+        /// Saves to storage.
+        /// </summary>
+        /// <param name="books">The books.</param>
+        /// <exception cref="ArgumentNullException">books</exception>
+        /// <exception cref="ArgumentException">books</exception>
         public void SaveToStorage(List<Book> books)
         {
             if (ReferenceEquals(books, null))
@@ -66,6 +89,10 @@ namespace BookLibrary
             }
         }
 
+        /// <summary>
+        /// Loads from storage.
+        /// </summary>
+        /// <returns></returns>
         public List<Book> LoadFromStorage()
         {
             Logger.Info($"Load started");

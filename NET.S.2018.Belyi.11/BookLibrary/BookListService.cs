@@ -9,6 +9,10 @@ namespace BookLibrary
 {
     public sealed class BookListService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BookListService"/> class.
+        /// </summary>
+        /// <param name="logger">The logger.</param>
         public BookListService(ILogger logger = null)
         {
             if (ReferenceEquals(logger, null))
@@ -23,10 +27,28 @@ namespace BookLibrary
             BookList = new List<Book>();
         }
 
+        /// <summary>
+        /// Gets the book list.
+        /// </summary>
+        /// <value>
+        /// The book list.
+        /// </value>
         public List<Book> BookList { get; private set; }
 
+        /// <summary>
+        /// Gets the logger.
+        /// </summary>
+        /// <value>
+        /// The logger.
+        /// </value>
         private ILogger Logger { get; }
 
+        /// <summary>
+        /// Adds the book.
+        /// </summary>
+        /// <param name="book">The book.</param>
+        /// <exception cref="ArgumentNullException">book</exception>
+        /// <exception cref="ArgumentException">book</exception>
         public void AddBook(Book book)
         {
             if (ReferenceEquals(book, null))
@@ -45,6 +67,12 @@ namespace BookLibrary
             Logger.Info($"{nameof(book)} added!");
         }
 
+        /// <summary>
+        /// Removes the book.
+        /// </summary>
+        /// <param name="book">The book.</param>
+        /// <exception cref="ArgumentNullException">book</exception>
+        /// <exception cref="ArgumentException">book</exception>
         public void RemoveBook(Book book)
         {
             if (ReferenceEquals(book, null))
@@ -62,6 +90,11 @@ namespace BookLibrary
             Logger.Info($"{nameof(book)} remove complete!");
         }
 
+        /// <summary>
+        /// Saves to storage.
+        /// </summary>
+        /// <param name="storage">The storage.</param>
+        /// <exception cref="ArgumentNullException">storage</exception>
         public void SaveToStorage(IBookListStorage storage)
         {
             Logger.Info($"Saving to storage started!");
@@ -75,6 +108,11 @@ namespace BookLibrary
             Logger.Info($"Saving to storage completed!");
         }
 
+        /// <summary>
+        /// Loads from storage.
+        /// </summary>
+        /// <param name="storage">The storage.</param>
+        /// <exception cref="ArgumentNullException">storage</exception>
         public void LoadFromStorage(IBookListStorage storage)
         {
             Logger.Info($"Loading from storage!");
@@ -87,6 +125,11 @@ namespace BookLibrary
             Logger.Info($"Loading from storage completed!");
         }
 
+        /// <summary>
+        /// Sorts the books list by tag.
+        /// </summary>
+        /// <param name="comparer">The comparer.</param>
+        /// <exception cref="ArgumentNullException">comparer</exception>
         public void SortBooksListByTag(IComparer<Book> comparer)
         {
             Logger.Info($"Sorting!");
@@ -100,6 +143,12 @@ namespace BookLibrary
             BookList.Sort(comparer);
         }
 
+        /// <summary>
+        /// Finds the book by tag.
+        /// </summary>
+        /// <param name="criterion">The criterion.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">criterion</exception>
         public Book FindBookByTag(IBookPredicate<Book> criterion)
         {
             Logger.Info($"Searching...!");

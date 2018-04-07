@@ -9,6 +9,12 @@ namespace BookLibraryApplication.Comparators
 {
     public class PriceComparer : IComparer<Book>
     {
+        /// <summary>
+        /// Compares the specified first book.
+        /// </summary>
+        /// <param name="firstBook">The first book.</param>
+        /// <param name="secondBook">The second book.</param>
+        /// <returns></returns>
         public int Compare(Book firstBook, Book secondBook)
         {
             if (ReferenceEquals(firstBook, secondBook))
