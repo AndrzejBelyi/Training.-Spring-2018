@@ -6,33 +6,96 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    public delegate int AlgorithmGcdDelegate(int value1, int value2);
-
     public static class GCD
     {    
-
-        public static int GetGCD(AlgorithmGcdDelegate algorithmGcd, int firstNumber, int secondNumber)
+        /// <summary>
+        /// Finds and returns the greatest common divisor of three integers using the Euclidean algorithm
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <param name="thirdNumber"></param>
+        /// <returns>Returns greater common divisor</returns>
+        public static int GetGCDByEuclid(int firstNumber, int secondNumber, int thirdNumber)
         {
-            return algorithmGcd(firstNumber, secondNumber);
+            Func<int, int, int> algorithmGCD = GetGCDByEuclid;
+            return algorithmGCD(algorithmGCD(firstNumber, secondNumber), thirdNumber);
         }
 
-        public static int GetGCD(AlgorithmGcdDelegate algorithmGcd, int firstNumber, int secondNumber, int thirdNumber)
+        /// <summary>
+        /// Finds and returns the greatest common divisor of n integers using the Euclidean algorithm
+        /// </summary>
+        /// <param name="arguments"></param>
+        /// <returns>Returns greater common divisor</returns>
+        public static int GetGCDByEuclid(params int[] arguments)
         {
-            return algorithmGcd(algorithmGcd(firstNumber, secondNumber), thirdNumber);
+            Func<int, int, int> algorithmGCD = GetGCDByEuclid;
+            return GetGCD(algorithmGCD, arguments);
+
         }
 
-        public static int GetGCD(AlgorithmGcdDelegate algorithmGcd, params int[] arguments)
+        /// <summary>
+        /// Finds and returns the greatest common divisor of 3 integers using the Stein algorithm
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <param name="thirdNumber"></param>
+        /// <returns>Returns greater common divisor</returns>
+        public static int GetGCDByStein(int firstNumber, int secondNumber, int thirdNumber)
         {
-            DataVerification(arguments);
-            int gcd = algorithmGcd(arguments[0], arguments[1]);
-            for (int i = 2; i < arguments.Length; i++)
+            Func<int, int, int> algorithmGCD = GetGCDByStein;
+            return algorithmGCD(algorithmGCD(firstNumber, secondNumber), thirdNumber);
+        }
+
+        /// <summary>
+        /// Finds and returns the greatest common divisor of n integers using the Stein algorithm
+        /// </summary>
+        /// <param name="arguments"></param>
+        /// <returns>Returns greater common divisor</returns>
+        public static int GetGCDByStein(params int[] arguments)
+        {
+            Func<int, int, int> algorithmGCD = GetGCDByStein;
+            return GetGCD(algorithmGCD,arguments);
+        }
+
+        /// <summary>
+        /// Finds and returns the greatest common divisor of two integers using the Euclidean algorithm
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <returns>Returns greater common divisor</returns>
+        public static int GetGCDByEuclid(int firstNumber, int secondNumber)
+        {
+            firstNumber = Math.Abs(firstNumber);
+            secondNumber = Math.Abs(secondNumber);
+            if (firstNumber == 0)
             {
-                gcd = algorithmGcd(gcd, arguments[i]);
+                return secondNumber;
             }
 
-            return gcd;
+            if (secondNumber == 0)
+            {
+                return firstNumber;
+            }
+
+            if (firstNumber == secondNumber)
+            {
+                return firstNumber;
+            }
+
+            if (firstNumber == 1 || secondNumber == 1)
+            {
+                return 1;
+            }
+
+            return GetGCDByEuclid(secondNumber, firstNumber % secondNumber);
         }
 
+        /// <summary>
+        /// Finds and returns the greatest common divisor of 2 integers using the Stein algorithm
+        /// </summary>
+        /// <param name="firstNumber"></param>
+        /// <param name="secondNumber"></param>
+        /// <returns>Returns greater common divisor</returns>
         public static int GetGCDByStein(int firstNumber, int secondNumber)
         {
             firstNumber = Math.Abs(firstNumber);
@@ -82,45 +145,32 @@ namespace Task1
             }
         }
 
-
-        public static int GetGCDByEuclid(int firstNumber, int secondNumber)
+        /// <summary>
+        /// Gets the GCD.
+        /// </summary>
+        /// <param name="algorithmGCD">The algorithm GCD.</param>
+        /// <param name="parametrs">The parametrs.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">parametrs</exception>
+        /// <exception cref="ArgumentException">parametrs</exception>
+        private static int GetGCD(Func<int, int, int> algorithmGCD, params int[] parametrs)
         {
-            firstNumber = Math.Abs(firstNumber);
-            secondNumber = Math.Abs(secondNumber);
-            if (firstNumber == 0)
+            if (parametrs == null)
             {
-                return secondNumber;
+                throw new ArgumentNullException(nameof(parametrs));
             }
 
-            if (secondNumber == 0)
+            if (parametrs.Length < 2)
             {
-                return firstNumber;
+                throw new ArgumentException(nameof(parametrs));
             }
 
-            if (firstNumber == secondNumber)
+            int result = parametrs[0];
+            for (int i = 1; i < parametrs.Length; i++)
             {
-                return firstNumber;
+                result = algorithmGCD(result, parametrs[i]);
             }
-
-            if (firstNumber == 1 || secondNumber == 1)
-            {
-                return 1;
-            }
-
-            return GetGCDByEuclid(secondNumber, firstNumber % secondNumber);
-        }
-
-        private static void DataVerification(int[] arguments)
-        {
-            if (arguments == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (arguments.Length < 2)
-            {
-                throw new ArgumentException();
-            }
+            return result;
         }
     }
 }

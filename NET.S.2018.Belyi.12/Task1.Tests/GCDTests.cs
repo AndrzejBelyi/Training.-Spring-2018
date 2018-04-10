@@ -10,8 +10,6 @@ namespace Task1.Tests
 {
     public class GCDTests
     {
-        public AlgorithmGcdDelegate algorithm = GCD.GetGCDByEuclid;
-
         [Test]
         [TestCase(9, -3, 3)]
         [TestCase(10000, 15000, 5000)]
@@ -23,8 +21,7 @@ namespace Task1.Tests
         [TestCase(9, 10, 1)]
         public void GetGcdByEuclid_TwoArguments(int firstNumber, int secondNumber, int expectedResult)
         {
-           
-            int actualResult = GCD.GetGCD(algorithm, firstNumber, secondNumber);
+            int actualResult = GCD.GetGCDByEuclid(firstNumber, secondNumber);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -36,7 +33,7 @@ namespace Task1.Tests
         [TestCase(0, 0, 3, 3)]
         public void GetGcdByEuclid_ThreeArguments(int firstNumber, int secondNumber, int thirdNumber, int expectedResult)
         {
-            int actualResult = GCD.GetGCD(algorithm, firstNumber, secondNumber, thirdNumber);
+            int actualResult = GCD.GetGCDByEuclid(firstNumber, secondNumber, thirdNumber);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -48,12 +45,18 @@ namespace Task1.Tests
         [TestCase(3, 0, 6, 3, 0)]
         public void GetGcdByEuclid_ManyArguments(int expectedResult, params int[] arguments)
         {
-            int actualResult = GCD.GetGCD(algorithm, arguments);
+            int actualResult = GCD.GetGCDByEuclid(arguments);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void GetGcdByEuclid_NullArgument_NullArgumentException()
+            => Assert.Throws<ArgumentNullException>(() => GCD.GetGCDByEuclid(null));
 
-        public AlgorithmGcdDelegate algorithm2 = GCD.GetGCDByEuclid;
+        [Test]
+        public void GetGcdByEuclid_OneArgument_ArgumentException()
+            => Assert.Throws<ArgumentException>(() => GCD.GetGCDByEuclid(12));
+
         [Test]
         [TestCase(9, -3, 3)]
         [TestCase(10000, 15000, 5000)]
@@ -65,7 +68,7 @@ namespace Task1.Tests
         [TestCase(9, 10, 1)]
         public void GetGcdByStein_TwoArguments(int firstNumber, int secondNumber, int expectedResult)
         {
-            int actualResult = GCD.GetGCD(algorithm, firstNumber, secondNumber);
+            int actualResult = GCD.GetGCDByStein(firstNumber, secondNumber);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -76,7 +79,7 @@ namespace Task1.Tests
         [TestCase(0, 3, 6, 3)]
         public void GetGcdByStein_ThreeArguments(int firstNumber, int secondNumber, int thirdNumber, int expectedResult)
         {
-            int actualResult = GCD.GetGCD(algorithm ,firstNumber, secondNumber, thirdNumber);
+            int actualResult = GCD.GetGCDByStein(firstNumber, secondNumber, thirdNumber);
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -89,8 +92,16 @@ namespace Task1.Tests
 
         public void GetGcdByStein_ManyArguments(int expectedResult, params int[] arguments)
         {
-            int actualResult = GCD.GetGCD(algorithm , arguments);
+            int actualResult = GCD.GetGCDByStein(arguments);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [Test]
+        public void GetGcdByStein_NullArgument_NullArgumentException()
+            => Assert.Throws<ArgumentNullException>(() => GCD.GetGCDByStein(null));
+
+        [Test]
+        public void GetGcdByStein_OneArgument_ArgumentException()
+            => Assert.Throws<ArgumentException>(() => GCD.GetGCDByStein(12));
     }
 }
