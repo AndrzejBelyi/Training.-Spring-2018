@@ -11,7 +11,7 @@ namespace TimerApp
     {
         static void Main(string[] args)
         {            
-            Timer.Timer timer = new Timer.Timer(2);
+            Timer.TimerOne timer = new Timer.TimerOne(2);
             Console.WriteLine($"Новый таймер! {timer.GetType()}");
             Console.WriteLine("Время таймера:" + timer.Time);
             listener listener1 = new listener();
@@ -19,7 +19,7 @@ namespace TimerApp
             Console.WriteLine("Отсчёт пошёл!");
             timer.Start();
 
-            Timer.Timer_ver2 timer2 = new Timer_ver2(5);
+            Timer.TimerTwo timer2 = new TimerTwo(5);
             Console.WriteLine($"\nНовый таймер! {timer2.GetType()}");
             Console.WriteLine("Время таймера:" + timer2.Time);
             timer2.timerTick += listener1.MethodToInvoke;
@@ -57,7 +57,7 @@ namespace TimerApp
             /// <param name="e">The e.</param>
             public void MethodToInvoke(object sender, TimerTickEvenArgs e)
             {
-                Console.WriteLine($"{e.Report} {(sender as Timer_ver2).Time}");
+                Console.WriteLine($"{e.Report} {(sender as TimerTwo).Time}");
             }
         }
     }

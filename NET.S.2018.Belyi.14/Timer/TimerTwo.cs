@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Timer
 {
-    public sealed class Timer_ver2
+    public sealed class TimerTwo
     {
         /// <summary>
         /// Occurs when [timer elapsed].
@@ -28,17 +28,17 @@ namespace Timer
         public uint Time { get; private set; } = 10;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Timer"/> class.
+        /// Initializes a new instance of the <see cref="TimerOne"/> class.
         /// </summary>
-        public Timer_ver2()
+        public TimerTwo()
         {
 
         }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Timer"/> class.
+        /// Initializes a new instance of the <see cref="TimerOne"/> class.
         /// </summary>
         /// <param name="time">The time.</param>
-        public Timer_ver2(uint time)
+        public TimerTwo(uint time)
         {
             Time = time;
         }
