@@ -8,32 +8,14 @@ using System.Threading.Tasks;
 namespace Timer
 {
     public sealed class TimerTwo
-    {
-        /// <summary>
-        /// Occurs when [timer elapsed].
-        /// </summary>
-        public event EventHandler<TimerElapsedEvenArgs> timerElapsed = delegate { };
-
-        /// <summary>
-        /// Occurs when [timer tick].
-        /// </summary>
-        public event EventHandler<TimerTickEvenArgs> timerTick = delegate { };
-
-        /// <summary>
-        /// Gets the time.
-        /// </summary>
-        /// <value>
-        /// The time.
-        /// </value>
-        public uint Time { get; private set; } = 10;
-
+    {       
         /// <summary>
         /// Initializes a new instance of the <see cref="TimerOne"/> class.
         /// </summary>
         public TimerTwo()
         {
-
         }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimerOne"/> class.
         /// </summary>
@@ -42,6 +24,27 @@ namespace Timer
         {
             Time = time;
         }
+
+        /// <summary>
+        /// Occurs when [timer elapsed].
+        /// </summary>
+
+        public event EventHandler<TimerElapsedEvenArgs> TimerElapsed = delegate { };
+        
+        /// <summary>
+        /// Occurs when [timer tick].
+        /// </summary>
+
+        public event EventHandler<TimerTickEvenArgs> TimerTick = delegate { };
+        
+        /// <summary>
+        /// Gets the time.
+        /// </summary>
+        /// <value>
+        /// The time.
+        /// </value>
+
+        public uint Time { get; private set; } = 10;
 
         /// <summary>
         /// Starts this instance.
@@ -66,7 +69,7 @@ namespace Timer
         /// <param name="eventArgs">The event arguments.</param>
         private void OnTick(object sender, TimerTickEvenArgs eventArgs)
         {
-            timerTick?.Invoke(this, eventArgs);
+            TimerTick?.Invoke(this, eventArgs);
         }
 
         /// <summary>
@@ -76,7 +79,7 @@ namespace Timer
         /// <param name="eventArgs">The event arguments.</param>
         private void OnElapsed(object sender, TimerElapsedEvenArgs eventArgs)
         {
-            timerElapsed?.Invoke(this, eventArgs);
+            TimerElapsed?.Invoke(this, eventArgs);
         }
     }
 }
