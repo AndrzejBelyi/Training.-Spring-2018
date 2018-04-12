@@ -22,7 +22,7 @@ namespace Task2
         /// collection
         /// </exception>
         public static int BinarySearch<T>(T item, IEnumerable<T> collection)
-        where T : IComparable<T>
+        where T: IComparable<T>
         {
             CheckInput(item, collection);
 
@@ -34,6 +34,7 @@ namespace Task2
 
             return -1;
         }
+
 
         /// <summary>
         /// Binaries the search.
@@ -66,6 +67,7 @@ namespace Task2
 
             return -1;
         }
+
 
         /// <summary>
         /// Binaries the search.
@@ -111,7 +113,8 @@ namespace Task2
 
             while (!(left >= right))
             {
-                mid = left + ((right - left) / 2);
+                mid = left + (right - left) / 2;
+
                 if (comparer.Compare(collection.ElementAt(mid), item) == 0)
                 {
                     index = mid;

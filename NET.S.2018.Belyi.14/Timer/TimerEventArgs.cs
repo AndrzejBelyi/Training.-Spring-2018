@@ -11,12 +11,21 @@ namespace Timer
     /// </summary>
     /// <seealso cref="System.EventArgs" />
     public sealed class TimerTickEvenArgs : EventArgs
-    {       
+    {
+        /// <summary>
+        /// Gets the report.
+        /// </summary>
+        /// <value>
+        /// The report.
+        /// </value>
+        public string Report { get; set; } = string.Empty;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimerTickEvenArgs"/> class.
         /// </summary>
         public TimerTickEvenArgs()
         {
+
         }
 
         /// <summary>
@@ -25,16 +34,8 @@ namespace Timer
         /// <param name="report">The report.</param>
         public TimerTickEvenArgs(string report)
         {
-            this.Report = report;
+            Report = report;
         }
-
-        /// <summary>
-        /// Gets the report.
-        /// </summary>
-        /// <value>
-        /// The report.
-        /// </value>
-        public string Report { get; set; } = string.Empty;
     }
 
     /// <summary>
@@ -42,12 +43,21 @@ namespace Timer
     /// </summary>
     /// <seealso cref="System.EventArgs" />
     public sealed class TimerElapsedEvenArgs : EventArgs
-    {      
+    {
+        /// <summary>
+        /// Gets the report.
+        /// </summary>
+        /// <value>
+        /// The report.
+        /// </value>
+        public string Report { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimerElapsedEvenArgs"/> class.
         /// </summary>
         public TimerElapsedEvenArgs()
         {
+
         }
 
         /// <summary>
@@ -56,15 +66,7 @@ namespace Timer
         /// <param name="report">The report.</param>
         public TimerElapsedEvenArgs(string report)
         {
-            this.Report = report;
+            Report = report;
         }
-
-        /// <summary>
-        /// Gets the report.
-        /// </summary>
-        /// <value>
-        /// The report.
-        /// </value>
-        public string Report { get; set; }
     }
 }
