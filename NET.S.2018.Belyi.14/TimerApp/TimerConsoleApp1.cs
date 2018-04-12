@@ -15,15 +15,15 @@ namespace TimerApp
             Console.WriteLine($"Новый таймер! {timer.GetType()}");
             Console.WriteLine("Время таймера:" + timer.Time);
             listener listener1 = new listener();
-            timer.timerElapsed += listener1.MethodToInvoke;
+            timer.TimerElapsed += listener1.MethodToInvoke;
             Console.WriteLine("Отсчёт пошёл!");
             timer.Start();
 
             Timer.TimerTwo timer2 = new TimerTwo(5);
             Console.WriteLine($"\nНовый таймер! {timer2.GetType()}");
             Console.WriteLine("Время таймера:" + timer2.Time);
-            timer2.timerTick += listener1.MethodToInvoke;
-            timer2.timerElapsed += listener1.MethodToInvoke;
+            timer2.TimerTick += listener1.MethodToInvoke;
+            timer2.TimerElapsed += listener1.MethodToInvoke;
             Console.WriteLine("Отсчёт пошёл!");
             timer2.Start();            
 

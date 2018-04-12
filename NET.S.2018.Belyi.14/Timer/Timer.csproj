@@ -43,7 +43,12 @@
     <Compile Include="TimerOne.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimerEventArgs.cs" />
-    <Compile Include="TimerTwo.cs" />
+    <Compile Include="TimerTwo.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.StyleCop" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
