@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task2
+namespace Task1
 {
-    public static class Searching
+   public static class Searching
     {
         /// <summary>
         /// Tries the binary search.
@@ -21,13 +21,13 @@ namespace Task2
         /// or
         /// collection
         /// </exception>
-        public static int BinarySearch<T>(T item, IEnumerable<T> collection)
+        public static int BinarySearch<T>(this IEnumerable<T> collection, T item)
         where T : IComparable<T>
         {
             CheckInput(item, collection);
 
             int index;
-            if (TryBinarySearch(item, collection, Comparer<T>.Default, out index))
+            if (TryBinarySearch(collection, item, Comparer<T>.Default, out index))
             {
                 return index;
             }
@@ -50,7 +50,7 @@ namespace Task2
         /// or
         /// item
         /// </exception>
-        public static int BinarySearch<T>(T item, IEnumerable<T> collection, IComparer<T> comparer)
+        public static int BinarySearch<T>(this IEnumerable<T> collection, T item, IComparer<T> comparer)
         {
             CheckInput(item, collection);
             if (ReferenceEquals(comparer, null))
@@ -59,7 +59,7 @@ namespace Task2
             }
 
             int index;
-            if (TryBinarySearch(item, collection, comparer, out index))
+            if (TryBinarySearch(collection, item, comparer, out index))
             {
                 return index;
             }
@@ -76,7 +76,7 @@ namespace Task2
         /// <param name="comparison">The comparison.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">item</exception>
-        public static int BinarySearch<T>(T item, IEnumerable<T> collection, Comparison<T> comparison)
+        public static int BinarySearch<T>(this IEnumerable<T> collection, T item, Comparison<T> comparison)
         {
             CheckInput(item, collection);
             if (ReferenceEquals(comparison, null))
@@ -85,7 +85,7 @@ namespace Task2
             }
 
             int index;
-            if (TryBinarySearch(item, collection, Comparer<T>.Create(comparison), out index))
+            if (TryBinarySearch(collection, item, Comparer<T>.Create(comparison), out index))
             {
                 return index;
             }
@@ -102,7 +102,7 @@ namespace Task2
         /// <param name="comparer">The comparer.</param>
         /// <param name="index">The index.</param>
         /// <returns></returns>
-        private static bool TryBinarySearch<T>(T item, IEnumerable<T> collection, IComparer<T> comparer, out int index)
+        private static bool TryBinarySearch<T>(this IEnumerable<T> collection, T item, IComparer<T> comparer, out int index)
         {
             index = 0;
             int left = 0;
@@ -154,5 +154,5 @@ namespace Task2
                 throw new ArgumentNullException($"{nameof(collection)} is null!");
             }
         }
-    } 
+    }
 }
