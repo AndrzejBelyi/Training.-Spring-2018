@@ -9,6 +9,15 @@ namespace Task1
 {
     public static class Filters
     {
+        /// <summary>
+        /// Filters the specified predicate.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection">The collection.</param>
+        /// <param name="predicate">The predicate.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentNullException">
+        /// </exception>
         public static IEnumerable<T> Filter<T>(this IEnumerable<T> collection, IPredicate<T> predicate)
         {
             if (collection == null)
@@ -24,12 +33,22 @@ namespace Task1
             return Filter(predicate.Predicate, collection);
         }
 
+        /// <summary>
+        /// Filters the specified predicate.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection">The collection.</param>
+        /// <param name="predicate">The predicate.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentNullException">
+        /// </exception>
         public static IEnumerable<T> Filter<T>(this IEnumerable<T> collection, Predicate<T> predicate)
         {
             if (collection == null)
             {
                 throw new ArgumentNullException();
             }
+
             if (predicate == null)
             {
                 throw new ArgumentNullException();
@@ -38,6 +57,13 @@ namespace Task1
             return Filter(predicate, collection);
         }
 
+        /// <summary>
+        /// Filters the specified predicate.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="predicate">The predicate.</param>
+        /// <param name="collection">The collection.</param>
+        /// <returns></returns>
         private static IEnumerable<T> Filter<T>(Predicate<T> predicate, IEnumerable<T> collection)
         {
             Collection<T> filtredArray = new Collection<T>();
@@ -51,7 +77,5 @@ namespace Task1
 
             return filtredArray;
         }
-
     }
-
 }

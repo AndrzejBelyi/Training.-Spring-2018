@@ -9,12 +9,38 @@ namespace Task2
 {
     public class Queue<T> : IEnumerable<T>
     {
+        /// <summary>
+        /// The queue of <T>
+        /// </summary>
         private T[] queue;
-        public int Size { get; private set;}
+
+        /// <summary>
+        /// The tail
+        /// </summary>
         private int tail;
+
+        /// <summary>
+        /// The head
+        /// </summary>
         private int head;
+
+        /// <summary>
+        /// The version
+        /// </summary>
         private int version;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Queue{T}"/> class.
+        /// </summary>
+        public Queue() : this(10)
+        {      
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Queue{T}"/> class.
+        /// </summary>
+        /// <param name="capacity">The capacity.</param>
+        /// <exception cref="ArgumentException">capacity</exception>
         public Queue(int capacity)
         {
             if (capacity < 0)
@@ -29,18 +55,38 @@ namespace Task2
             this.version = 0;
         }
 
+        /// <summary>
+        /// Gets the size.
+        /// </summary>
+        /// <value>
+        /// The size.
+        /// </value>
+        public int Size { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the <see cref="T"/> at the specified index.
+        /// </summary>
+        /// <value>
+        /// The <see cref="T"/>.
+        /// </value>
+        /// <param name="index">The index.</param>
+        /// <returns></returns>
         public T this[int index]
         {
             get
             {
                 return queue[index];
             }
+
             set
             {
                 queue[index] = value;
             }
         }
 
+        /// <summary>
+        /// Clears this instance.
+        /// </summary>
         public void Clear()
         {            
             Array.Clear(this.queue, 0, Size);
@@ -50,6 +96,11 @@ namespace Task2
             version++;
         }
 
+        /// <summary>
+        /// Enqueues the specified object.
+        /// </summary>
+        /// <param name="obj">The object.</param>
+        /// <exception cref="ArgumentNullException">obj</exception>
         public void Enqueue(T obj)
         {
             if (ReferenceEquals(obj, null))
@@ -68,6 +119,11 @@ namespace Task2
             version++;
         }
 
+        /// <summary>
+        /// Dequeue this instance.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException">Count of elements in the queue is 0</exception>
         public T Dequeue()
         {
             if (Size == 0)
@@ -83,6 +139,11 @@ namespace Task2
             return removed;
         }
 
+        /// <summary>
+        /// Peeks this instance.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">Size is 0!</exception>
         public T Peek()
         {
             if (Size == 0)
@@ -93,22 +154,54 @@ namespace Task2
             return queue[head];
         }
 
+        /// <summary>
+        /// Returns an enumerator that iterates through the collection.
+        /// </summary>
+        /// <returns>
+        /// An enumerator that can be used to iterate through the collection.
+        /// </returns>
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return new QueueEnumerator(this);
         }
 
+        /// <summary>
+        /// Returns an enumerator that iterates through a collection.
+        /// </summary>
+        /// <returns>
+        /// An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+        /// </returns>
+        /// <exception cref="NotImplementedException"></exception>
         IEnumerator IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();
         }
 
-        private struct QueueEnumerator : IEnumerator
+        /// <summary>
+        /// Iterator struct
+        /// </summary>
+        /// <seealso cref="System.Collections.Generic.IEnumerable{T}" />
+        private struct QueueEnumerator : IEnumerator<T>
         {
+            /// <summary>
+            /// The queue
+            /// </summary>
             private readonly Queue<T> queue;
+
+            /// <summary>
+            /// The current
+            /// </summary>
             private int current;
+
+            /// <summary>
+            /// The version
+            /// </summary>
             private int version;
 
+            /// <summary>
+            /// Initializes a new instance of the <see cref="QueueEnumerator"/> struct.
+            /// </summary>
+            /// <param name="queue">The queue.</param>
             public QueueEnumerator(Queue<T> queue)
             {
                 this.current = -1;
@@ -116,6 +209,21 @@ namespace Task2
                 this.version = queue.version;
             }
 
+            /// <summary>
+            /// Gets the current.
+            /// </summary>
+            /// <value>
+            /// The current.
+            /// </value>
+            object IEnumerator.Current => Current;
+
+            /// <summary>
+            /// Advances the enumerator to the next element of the collection.
+            /// </summary>
+            /// <returns>
+            /// true if the enumerator was successfully advanced to the next element; false if the enumerator has passed the end of the collection.
+            /// </returns>
+            /// <exception cref="InvalidOperationException">queue</exception>
             public bool MoveNext()
             {
                 if (this.version != queue.version)
@@ -123,31 +231,41 @@ namespace Task2
                     throw new InvalidOperationException($"{nameof(queue)} changed!");
                 }
 
-                //if (current < 0)
-                //{
-                //    return false;
-                //}
+                if (current < 0)
+                {
+                    return false;
+                }
 
-                //currentElement = _q.GetElement(_index);
-                //_index++;
+                current++;
 
-                //if (_index == _q._size)
-                //    _index = -1;
-                //return true;
+                if (current == queue.Size)
+                {
+                    current = -1;
+                }
+
+                return true;
             }
 
+            /// <summary>
+            /// Sets the enumerator to its initial position, which is before the first element in the collection.
+            /// </summary>
             public void Reset()
             {
                 current = -1;
             }
 
-            object IEnumerator.Current => Current;
-
+            /// <summary>
+            /// Gets the current.
+            /// </summary>
+            /// <value>
+            /// The current.
+            /// </value>
+            /// <exception cref="InvalidOperationException">current</exception>
             public T Current
             {
                 get
                 {
-                    if (current == -1 || current == queue.Count)
+                    if (current == -1 || current == queue.Size)
                     {
                         throw new InvalidOperationException($"{nameof(current)} is wrong");
                     }
@@ -156,11 +274,12 @@ namespace Task2
                 }
             }
 
+            /// <summary>
+            /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            /// </summary>
             void IDisposable.Dispose()
-            {
+            {              
             }
-
-
         }
     }
 }
