@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Task1
@@ -7,27 +8,31 @@ namespace Task1
     {
         private IPasswordRepository repository = new SqlRepository();
 
-        private IPasswordChecker checker = new CheckPassword();
+        private IEnumerable<IPasswordChecker> checkers;
 
         public PasswordCheckerService()
         {
         }
 
-        public PasswordCheckerService(IPasswordRepository repository, IPasswordChecker checker)
+        public PasswordCheckerService(IPasswordRepository repository,IEnumerable<IPasswordChecker> checkers)
         {
-            this.checker = checker;
+            this.checkers = checkers;
             this.repository = repository;
         }
 
         public Tuple<bool, string> VerifyPassword(string password)
         {
-            Tuple<bool,string> tuple = checker.Check(password);
-            if (tuple.Item1)
+            foreach (var checker in checkers)
             {
-                repository.Create(password);
+                if (checker.Check(password).Item1 == false)
+                {
+                   return checker.Check(password);
+                }
             }
 
-            return tuple;           
+            repository.Create(password);
+
+            return Tuple.Create(true, $"{password} is ok!"); ;
         }
     }
 }
