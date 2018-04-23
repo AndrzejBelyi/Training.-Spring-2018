@@ -259,3 +259,9 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+NET.W.2017.LastName.Test/Task2.Solution/RandomBytesFileGenerator.cs
+NET.W.2017.LastName.Test/Task2.Solution/RandomCharsFileGenerator.cs
+NET.W.2017.LastName.Test/Task2.Solution/Task2.Solution.csproj
+NET.W.2017.LastName.Test/Task3.Console/Program.cs
+NET.W.2017.LastName.Test/Task2.Solution/Task2.Solution.csproj
+NET.W.2017.LastName.Test/Task2.Solution/Task2.Solution.csproj
