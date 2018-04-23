@@ -29,9 +29,9 @@ namespace Task3
         public void Update(object sender,StockInfoEventArgs eventArgs)
         {
             if (eventArgs.USD > 30)
-                Console.WriteLine("Брокер {0} продает доллары;  Курс доллара: {1}", this.Name, sInfo.USD);
+                Console.WriteLine("Брокер {0} продает доллары;  Курс доллара: {1}", this.Name, eventArgs.USD);
             else
-                Console.WriteLine("Брокер {0} покупает доллары;  Курс доллара: {1}", this.Name, sInfo.USD);
+                Console.WriteLine("Брокер {0} покупает доллары;  Курс доллара: {1}", this.Name, eventArgs.USD);
         }
 
         public void StopTrade(Stock stock)
