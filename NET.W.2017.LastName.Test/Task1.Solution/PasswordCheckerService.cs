@@ -21,9 +21,11 @@ namespace Task1
 
         public Tuple<bool, string> VerifyPassword(string password)
         {
-            Tuple<bool,string> tuple = checker.VerifyPassword(password);
-            
-            repository.Create(password);
+            Tuple<bool,string> tuple = checker.Check(password);
+            if (tuple.Item1)
+            {
+                repository.Create(password);
+            }
 
             return tuple;           
         }

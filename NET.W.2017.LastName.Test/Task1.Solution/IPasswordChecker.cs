@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    public interface IPasswordChecker
-    {           
-        Tuple<bool, string> VerifyPassword(string password);
+    public interface IPasswordChecker 
+    {
+        Tuple<bool, string> Check(string password);
     }
 }
