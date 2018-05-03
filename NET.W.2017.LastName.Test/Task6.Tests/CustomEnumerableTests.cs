@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using Task6;
 
 namespace Task6.Tests
 {
@@ -15,16 +16,14 @@ namespace Task6.Tests
         public void Generator_ForSequence1()
         {
             int[] expected = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55};
-
-            Assert.Inconclusive();
+            CollectionAssert.AreEqual(Test6.Solution.Generator.Generate<int>(1, 1, 10, (x, y) => x + y), expected);
         }
 
         [Test]
         public void Generator_ForSequence2()
         {
             int[] expected = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
-
-            Assert.Inconclusive();
+            CollectionAssert.AreEqual(Test6.Solution.Generator.Generate<int>(1, 2, 10, (x, y) => 6*x - 8*y), expected);
         }
 
         [Test]
