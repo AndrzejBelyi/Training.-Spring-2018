@@ -29,6 +29,6 @@ namespace LabExam
         /// Prints the specified file stream.
         /// </summary>
         /// <param name="fileStream">The file stream.</param>
-        void Print(FileStream fileStream);
+        void Print(Stream stream);
     }
 }

@@ -15,15 +15,15 @@ namespace LabExam
         /// <param name="message">The message.</param>
         public void Log(string message)
         {
-            try
-            {
+            //try
+            //{
 
-                File.AppendText("log.txt").Write(message);
-            }
-            catch(IOException)
-            {
-                throw;
-            }
+            //    File.AppendText("log.txt").Write(message);
+            //}
+            //catch(IOException)
+            //{
+            //    throw;
+            //}
         }
     }
 }

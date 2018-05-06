@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LabExam
 {
-    public delegate void PrinterDelegate(string arg);
-
     internal class PrinterManager
     {
+        /// <summary>
+        /// The instance
+        /// </summary>
+        private static readonly Lazy<PrinterManager> instance = new Lazy<PrinterManager>(() => new PrinterManager());
+
         /// <summary>
         /// Initializes a new instance of the <see cref="PrinterManager"/> class.
         /// </summary>
@@ -24,10 +28,18 @@ namespace LabExam
                 this.Logger = logger;
             }
 
-            Printers = new List<IPrinter>();
+            printers = new List<Printer>();
             
         }
 
+        /// <summary>
+        /// Gets the instance.
+        /// </summary>
+        /// <value>
+        /// The instance.
+        /// </value>
+        public PrinterManager Instance => instance.Value;
+        
         /// <summary>
         /// Gets the logger.
         /// </summary>
@@ -37,52 +49,56 @@ namespace LabExam
         public ILogger Logger { get; }
 
         /// <summary>
-        /// Gets or sets the printers.
+        /// The printers
         /// </summary>
-        /// <value>
-        /// The printers.
-        /// </value>
-        private List<IPrinter> Printers { get; set; }
+        private List<Printer> printers;
 
         /// <summary>
-        /// Adds the specified p1.
+        /// Gets or sets the printers.
         /// </summary>
-        /// <param name="p1">The p1.</param>
-        /// <returns></returns>
-        public bool Add(IPrinter p1)
+        /// <returns>
+        /// The printers.
+        /// </returns>
+        public List<Printer> GetPrinters()
         {
-            if (!Printers.Contains(p1))
-            {
-                Printers.Add(p1);
-                return true;
-            }
-
-            return false;
+            return printers;
         }
 
         /// <summary>
-        /// Prints the specified p1.
+        /// Tries the add.
         /// </summary>
-        /// <param name="p1">The p1.</param>
-        /// <exception cref="ArgumentNullException">Printer is null!</exception>
-        public void Print(IPrinter p1)
+        /// <param name="printer">The printer.</param>
+        /// <returns></returns>
+        public bool TryAdd(Printer printer)
         {
-            if (ReferenceEquals(p1, null))
+            if (!GetPrinters().Contains(printer))
+            {
+                printer.StartPrint += (sender, args) => Logger.Log($"Printed by {printer.Name} {printer.Model}");
+                printer.EndPrint += (sender, args) => Logger.Log($"Printed by {printer.Name} {printer.Model}");
+                printers.Add(printer);
+                Logger.Log("Printed added!");
+                return true;
+            }
+            Logger.Log("Printed not added!");
+            return false;
+        }
+
+        public void Print(Printer printer, string fileName)
+        {
+            if (ReferenceEquals(printer, null))
             {
                 throw new ArgumentNullException("Printer is null!");
             }
 
-            Logger.Log("Print started");
-            var o = new OpenFileDialog();
-            o.ShowDialog();
-            var f = File.OpenRead(o.FileName);
-            p1.Print(f);
-            Logger.Log("Print finished");
-        }
+            if(!printers.Contains(printer))
+            {
+                throw new InvalidOperationException("Printer is not exist!");
+            }
 
-        /// <summary>
-        /// Occurs when [on printed].
-        /// </summary>
-        public static event PrinterDelegate OnPrinted;
+            using (FileStream stream = File.OpenRead(fileName))
+            {
+                printers.First(p => p.Equals(printer)).Print(stream);
+            }
+        }
     }
 }

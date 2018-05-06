@@ -8,7 +8,7 @@ namespace LabExam
         /// <summary>
         /// Initializes a new instance of the <see cref="EpsonPrinter"/> class.
         /// </summary>
-        public EpsonPrinter() : this("Epson", "231")
+        public EpsonPrinter() : this("231")
         {
         }
 
@@ -17,20 +17,19 @@ namespace LabExam
         /// </summary>
         /// <param name="name">The name.</param>
         /// <param name="model">The model.</param>
-        public EpsonPrinter(string name, string model) : base(name, model)
+        public EpsonPrinter(string model) : base(model)
         {
+            Name = "Epson";
         }
 
-        /// <summary>
-        /// Prints the specified file stream.
-        /// </summary>
-        /// <param name="fileStream">The file stream.</param>
-        public override void Print(FileStream fileStream)
+        public override string Name { get; }
+
+        protected override void PrintRule(Stream stream)
         {
-            for (int i = 0; i < fileStream.Length; i++)
+            for (int i = 0; i < stream.Length; i++)
             {
                 // simulate printing
-                Console.WriteLine(fileStream.ReadByte());
+                Console.WriteLine(stream.ReadByte());
             }
         }
     }
