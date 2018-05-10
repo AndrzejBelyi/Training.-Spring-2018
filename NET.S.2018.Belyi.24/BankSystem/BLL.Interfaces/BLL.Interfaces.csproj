@@ -44,7 +44,9 @@
     <Compile Include="Entities\Accounts\BaseAccount.cs" />
     <Compile Include="Entities\Accounts\GoldAccount.cs" />
     <Compile Include="Entities\Accounts\PlatinumAccount.cs" />
+    <Compile Include="Entities\AccountType.cs" />
     <Compile Include="Entities\Person.cs" />
+    <Compile Include="Interfaces\IAccountFactory.cs" />
     <Compile Include="Interfaces\IBankSystemService.cs" />
     <Compile Include="Interfaces\IGenerateId.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

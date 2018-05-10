@@ -10,48 +10,40 @@ using DAL.Interfaces.Interfaces;
 
 namespace BLL.Services
 {
-    class BankSystemService: BLL.Interfaces.Interfaces.IBankSystemService
+    class BankSystemService: IBankSystemService
     {
         private IRepository repository;
+
+        private IAccountFactory accountFactory;
         
-        public BankSystemService(IRepository repository)
+        public BankSystemService(IRepository repository, IAccountFactory accountFactory)
         {
             this.repository = repository;
+            this.accountFactory = accountFactory;
         }
 
-        public void CreateAccount(Person person, IGenerateId generator)
+        public void CreateAccount(AccountType type, Person person, IGenerateId generator)
         {
-            throw new NotImplementedException();
+            accountFactory.Create(type, person, generator);
+            repository.Add();
         }
 
-        public void Add(string id, decimal money)
+        public void Add(Account account, decimal sum)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Add(Account account, decimal money)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Close(string id)
-        {
-            throw new NotImplementedException();
+            account.Add(sum);
+            repository.Update();
         }
 
         public void Close(Account account)
         {
-            throw new NotImplementedException();
+            account.Close();
+            repository.Update();
         }
 
-        public void Withdraw(string id, decimal money)
+        public void Withdraw(Account account, decimal sum)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Withdraw(Account account, decimal money)
-        {
-            throw new NotImplementedException();
+            account.Withdraw(sum);
+            repository.Update();
         }
     }
 }

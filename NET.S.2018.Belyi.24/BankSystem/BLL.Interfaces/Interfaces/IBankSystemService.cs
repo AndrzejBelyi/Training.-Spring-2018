@@ -10,13 +10,10 @@ namespace BLL.Interfaces.Interfaces
 {
     public interface IBankSystemService
     {
-        void CreateAccount(Person person, IGenerateId generator);
-        void Close(string id);
+        void CreateAccount(AccountType type, Person person, IGenerateId generator);
         void Close(Account account);
-        void Add(string id, decimal money);
-        void Add(Account account, decimal money);
-        void Withdraw(string id, decimal money);
-        void Withdraw(Account account, decimal money);
+        void Add(Account account, decimal sum);
+        void Withdraw(Account account, decimal sum);
 
     }
 }

@@ -9,7 +9,7 @@ namespace BLL.Interfaces.Entities.Accounts
 {
     public sealed class GoldAccount : Account
     {
-        public GoldAccount(IGenerateId generator, Person owner, bool isClosed = false) : base(generator, owner, isClosed)
+        public GoldAccount(Person owner, IGenerateId generator, bool isClosed = false) : base(owner, generator,isClosed)
         {
         }
 

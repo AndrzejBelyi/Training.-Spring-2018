@@ -9,7 +9,7 @@ namespace BLL.Interfaces.Entities.Accounts
 {
     public abstract class Account
     {              
-        public Account(IGenerateId generator, Person owner,bool isClosed = false)
+        public Account(Person owner, IGenerateId generator, bool isClosed = false)
         {
             this.Id = generator.Generate();
             this.IsClosed = isClosed;
